@@ -7,6 +7,7 @@
 //
 
 #import "MoviesViewController.h"
+#import "MovieCell.h"
 
 @interface MoviesViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *movies;
@@ -47,9 +48,11 @@
     return self.movies.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
     NSDictionary *movie = self.movies[indexPath.row];
-    cell.textLabel.text = movie[@"title"];
+    cell.title.text = movie[@"title"];
+    cell.synopsis.text = movie[@"overview"];
+    //cell.textLabel.text = movie[@"title"];
     return cell;
 }
 

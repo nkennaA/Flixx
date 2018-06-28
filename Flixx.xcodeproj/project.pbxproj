@@ -15,6 +15,7 @@
 		0A44BC0F20E40ADC0049626A /* FlixxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44BC0E20E40ADC0049626A /* FlixxTests.m */; };
 		0A44BC1A20E40ADC0049626A /* FlixxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44BC1920E40ADC0049626A /* FlixxUITests.m */; };
 		0A44BC2920E4162E0049626A /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44BC2820E4162E0049626A /* MoviesViewController.m */; };
+		0AA54A1A20E55C0D005C3B54 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA54A1920E55C0D005C3B54 /* MovieCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		0A44BC1B20E40ADC0049626A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A44BC2720E4162E0049626A /* MoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
 		0A44BC2820E4162E0049626A /* MoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
+		0AA54A1820E55C0D005C3B54 /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		0AA54A1920E55C0D005C3B54 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				0A44BBF520E40ADB0049626A /* AppDelegate.h */,
 				0A44BBF620E40ADB0049626A /* AppDelegate.m */,
 				0A44BBFB20E40ADB0049626A /* Main.storyboard */,
+				0AA54A1820E55C0D005C3B54 /* MovieCell.h */,
+				0AA54A1920E55C0D005C3B54 /* MovieCell.m */,
 				0A44BBFE20E40ADC0049626A /* Assets.xcassets */,
 				0A44BC0020E40ADC0049626A /* LaunchScreen.storyboard */,
 				0A44BC0320E40ADC0049626A /* Info.plist */,
@@ -264,6 +269,7 @@
 			files = (
 				0A44BC0520E40ADC0049626A /* main.m in Sources */,
 				0A44BBF720E40ADB0049626A /* AppDelegate.m in Sources */,
+				0AA54A1A20E55C0D005C3B54 /* MovieCell.m in Sources */,
 				0A44BC2920E4162E0049626A /* MoviesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
