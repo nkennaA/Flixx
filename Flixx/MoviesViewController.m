@@ -13,15 +13,23 @@
 @interface MoviesViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
-
+@property (weak, nonatomic) IBOutlet UINavigationItem *bar;
+@property (strong, nonatomic) UIRefreshControl *refresher;
 @end
 
 @implementation MoviesViewController
 
 - (void)viewDidLoad {
+    
     self.movieTableView.delegate = self;
     self.movieTableView.dataSource =self;
+    [self FetchMovies];
+    self.refresher = [[UIRefreshControl alloc]init];
+    [self.refresher addTarget:self action:@selector(FetchMovies) forControlEvents:UIControlEventValueChanged];
+    [self.movieTableView insertSubview:self.refresher atIndex:0];
     [super viewDidLoad];
+}
+-(void)FetchMovies{
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -42,6 +50,7 @@
             // TODO: Reload your table view data
         }
     }];
+    [self.refresher endRefreshing];
     [task resume];
     // Do any additional setup after loading the view.
 }

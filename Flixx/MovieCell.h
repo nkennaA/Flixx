@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *synopsis;
 @property (weak, nonatomic) IBOutlet UIImageView *poster;
 
+
 @end
