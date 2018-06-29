@@ -22,9 +22,15 @@
                                 <rect key="frame" x="0.0" y="13" width="375" height="654"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="ucS-rY-U1I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="157" id="GzG-Kt-93X" customClass="MovieCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="157"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GzG-Kt-93X" id="1Qz-el-5iN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="156.5"/>
@@ -68,6 +74,7 @@
                     <connections>
                         <outlet property="bar" destination="SkB-ul-tju" id="dzH-S4-fV2"/>
                         <outlet property="movieTableView" destination="2sn-ju-mB0" id="Nao-S4-p7b"/>
+                        <outlet property="searchBar" destination="ucS-rY-U1I" id="vG7-5R-eUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
