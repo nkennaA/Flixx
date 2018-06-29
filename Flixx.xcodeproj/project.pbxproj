@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2CEA1920E58D7900CD2A3F /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CEA1820E58D7900CD2A3F /* DetailView.m */; };
 		0A44BBF720E40ADB0049626A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44BBF620E40ADB0049626A /* AppDelegate.m */; };
 		0A44BBFD20E40ADB0049626A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A44BBFB20E40ADB0049626A /* Main.storyboard */; };
 		0A44BBFF20E40ADC0049626A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A44BBFE20E40ADC0049626A /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		019102C28676FE8F2BDBD8A9 /* libPods-Flixx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Flixx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2CEA1720E58D7900CD2A3F /* DetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
+		0A2CEA1820E58D7900CD2A3F /* DetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		0A44BBF220E40ADB0049626A /* Flixx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A44BBF520E40ADB0049626A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A44BBF620E40ADB0049626A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				0A44BBF520E40ADB0049626A /* AppDelegate.h */,
 				0A44BBF620E40ADB0049626A /* AppDelegate.m */,
 				0A44BBFB20E40ADB0049626A /* Main.storyboard */,
+				0A2CEA1720E58D7900CD2A3F /* DetailView.h */,
+				0A2CEA1820E58D7900CD2A3F /* DetailView.m */,
 				0AA54A1820E55C0D005C3B54 /* MovieCell.h */,
 				0AA54A1920E55C0D005C3B54 /* MovieCell.m */,
 				0A44BBFE20E40ADC0049626A /* Assets.xcassets */,
@@ -369,6 +374,7 @@
 			files = (
 				0A44BC0520E40ADC0049626A /* main.m in Sources */,
 				0A44BBF720E40ADB0049626A /* AppDelegate.m in Sources */,
+				0A2CEA1920E58D7900CD2A3F /* DetailView.m in Sources */,
 				0AA54A1A20E55C0D005C3B54 /* MovieCell.m in Sources */,
 				0A44BC2920E4162E0049626A /* MoviesViewController.m in Sources */,
 			);

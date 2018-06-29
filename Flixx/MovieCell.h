@@ -1,7 +1,6 @@
 //
 //  MovieCell.h
 //  Flixx
-//
 //  Created by Nkenna Aniedobe on 6/28/18.
 //  Copyright © 2018 Nkenna Aniedobe. All rights reserved.
 //

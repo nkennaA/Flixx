@@ -55,6 +55,7 @@
                                             <outlet property="poster" destination="yg9-ZQ-9aJ" id="SjM-vR-hAd"/>
                                             <outlet property="synopsis" destination="C2a-UQ-Ag7" id="85u-1Z-Rzv"/>
                                             <outlet property="title" destination="gIH-Ew-nZB" id="yLV-ne-npx"/>
+                                            <segue destination="Yf0-1Q-Xg4" kind="show" identifier="detailSegue" id="5yz-GK-h5p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -73,20 +74,56 @@
             </objects>
             <point key="canvasLocation" x="972" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View-->
         <scene sceneID="fVy-Jk-z7a">
             <objects>
-                <viewController id="Yf0-1Q-Xg4" sceneMemberID="viewController">
+                <viewController id="Yf0-1Q-Xg4" customClass="DetailView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hJ-nd-asT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBA-Na-vcF">
+                                <rect key="frame" x="0.0" y="0.0" width="441" height="741"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03G-36-YgS">
+                                        <rect key="frame" x="0.0" y="-64" width="433" height="354"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2f-jh-ODz">
+                                        <rect key="frame" x="0.0" y="187" width="130" height="197"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8of-jz-dbj">
+                                        <rect key="frame" x="37" y="424" width="358" height="184"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-JK-WYc">
+                                        <rect key="frame" x="37" y="392" width="366" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YgD-w9-7s7"/>
                     </view>
+                    <connections>
+                        <outlet property="backdrop" destination="03G-36-YgS" id="pve-Cd-hVI"/>
+                        <outlet property="poster2" destination="v2f-jh-ODz" id="Ehk-ON-KsW"/>
+                        <outlet property="scrollview" destination="zBA-Na-vcF" id="yJg-zs-xlt"/>
+                        <outlet property="sumlabel" destination="8of-jz-dbj" id="U8n-Qw-q3S"/>
+                        <outlet property="titlelabel" destination="BL1-JK-WYc" id="kIu-Lh-gYA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5h-AZ-a9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="34"/>
+            <point key="canvasLocation" x="1788" y="33.733133433283363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jLf-AG-pUe">
@@ -96,6 +133,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DtC-nF-Zil">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

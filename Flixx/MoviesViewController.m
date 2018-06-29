@@ -9,7 +9,7 @@
 #import "MoviesViewController.h"
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
-
+#import "DetailView.h"
 @interface MoviesViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
@@ -76,14 +76,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+ //In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UITableViewCell *tapped = sender;
+    NSIndexPath *indexPath = [self.movieTableView indexPathForCell:tapped];
+    NSDictionary *movie = self.movies[indexPath.row];
+    DetailView *detailView = [segue destinationViewController];
+    detailView.movie = movie;
 }
-*/
 
 @end
