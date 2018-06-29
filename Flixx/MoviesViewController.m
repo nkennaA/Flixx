@@ -68,9 +68,12 @@
     NSURL *fullURL = [NSURL URLWithString:posterURL];
     cell.poster.image = nil;
     [cell.poster setImageWithURL:fullURL];
+    cell.backgroundColor = [UIColor blackColor];
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
