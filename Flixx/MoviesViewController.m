@@ -89,7 +89,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UITableViewCell *tapped = sender;
     NSIndexPath *indexPath = [self.movieTableView indexPathForCell:tapped];
-    NSDictionary *movie = self.movies[indexPath.row];
+    NSDictionary *movie = self.filteredMovies[indexPath.row];
     DetailView *detailView = [segue destinationViewController];
     detailView.movie = movie;
 }
